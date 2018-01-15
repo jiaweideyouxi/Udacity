@@ -30,7 +30,7 @@ for index in range(len(calls)):
         number_time[calls[index][0]] = int(calls[index][3])
     elif calls[index][0] in number_time:
         number_time[calls[index][0]] += int(calls[index][3])
-    elif calls[index][1] not in number_time:
+    if calls[index][1] not in number_time:
         number_time[calls[index][1]] = int(calls[index][3])
     elif calls[index][1] in number_time:
         number_time[calls[index][1]] += int(calls[index][3])

@@ -29,8 +29,15 @@ with open('calls.csv', 'r') as f:
 
 call_list = []
 
+text_list = []
+for text in texts:
+    text_list.append(text[1])
+    text_list.append(text[1])
+
+
+
 for index in range(len(calls)):
-    if calls[index][0] not in texts:
+    if calls[index][0] not in text_list:
         a = 0
         for index_1 in range(len(calls)):
             if calls[index][0] == calls[index_1][1]:
